@@ -15,3 +15,9 @@ variables:
 steps:
 - script: dotnet build --configuration $(buildConfiguration)
   displayName: 'dotnet build $(buildConfiguration)'
+
+- task: AzureWebApp@1
+  inputs:
+    azureSubscription: '504215e5-c473-41bd-ad45-ab065b50d098'
+    appName: 'jacmarTestDevOps'
+    package: $(System.DefaultWorkingDirectory)/**/*.zip
