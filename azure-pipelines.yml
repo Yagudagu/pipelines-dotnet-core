@@ -29,6 +29,5 @@ steps:
 - task: AzureWebApp@1
   inputs:
     azureSubscription: 'de56834a-29cf-4e09-bd90-b7e93d6136a9'
-    appType: 'webApp'
     appName: 'jacmarTestDevOps'
     package: $(System.DefaultWorkingDirectory)/**/*.zip
